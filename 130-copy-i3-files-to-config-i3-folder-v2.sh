@@ -142,17 +142,17 @@ esac
 
 # define the github here, just last part
 
-GITHUB=i3-installation-on-latest-linux-mint
+GITHUB=i3InstallOnFedoraXfce
 
 echo "################################################################"
-echo "Checking if /tmp folder is clean"
-[ -d /tmp/$GITHUB ] && rm -rf "/tmp/$GITHUB" & echo "/tmp is clean now" || echo "/tmp is clean"
+echo "Checking if $HOME/tmp folder is clean"
+[ -d $HOME/tmp/$GITHUB ] && rm -rf "$HOME/tmp/$GITHUB" & echo "/tmp is clean now" || echo "/tmp is clean"
 
 echo "################################################################"
 echo "Downloading the files from github to /tmp directory " $GITHUB
 
 
-git clone https://github.com/erikdubois/$GITHUB /tmp/$GITHUB
+git clone https://github.com/bogdanzsolt/$GITHUB $HOME/tmp/$GITHUB
 
 
 echo "################################################################"
@@ -190,10 +190,7 @@ fi
 
 
 # copy all config files to this hidden folder
-rm /tmp/$GITHUB/git-v1.sh 
-rm /tmp/$GITHUB/setup-git-v1.sh
-
-cp -rf /tmp/$GITHUB/* ~/.config/i3
+cp -rf $HOME/tmp/$GITHUB/config/* ~/.config/i3
 rm -rf /tmp/$GITHUB
 
 echo "################################################################"
