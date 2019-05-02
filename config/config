@@ -34,11 +34,11 @@
 #set Super key
 set $mod Mod4
 
-#set default aplcations
+#set default applications
 set $FileManager "thunar"
 set $Browser "google-chrome-stable"
+set $Browser2 "firfox"
 set $Terminal "xfce4-terminal"
-
 
 #####################################################################################################################
 #################                          Define the movements keys - variables                    #################
@@ -82,6 +82,7 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 #set $firstMonitor DVI-I-0
 #set $secondMonitor HDMI-0
+
 
 #set $firstMonitor DVI-0
 #set $secondMonitor DVI-1
@@ -385,7 +386,6 @@ font pango:Noto Mono Regular 13
 #terminal
 #exec --no-startup-id $Terminal
 
-
 #Mail clients
 #exec --no-startup-id evolution
 
@@ -416,6 +416,9 @@ exec --no-startup-id nm-applet
 # dropbox
 #exec --no-startup-id dropbox start
 
+# power management
+exec_always -no-startup-id Xfce4-power-manager
+
 # insync
 #exec --no-startup-id insync start
 
@@ -437,7 +440,6 @@ exec --no-startup-id clipit
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
 #####################################################################################################################
-
 
 #not workspace related
 

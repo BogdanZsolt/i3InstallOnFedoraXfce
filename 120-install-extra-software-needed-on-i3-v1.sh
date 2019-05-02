@@ -10,13 +10,11 @@ echo "#########################################################"
 echo "General software"
 echo "#########################################################"
 
-
 sudo dnf install -y firefox
-sudo dnf install -y krita 
-sudo dnf install -y inkscape 
-sudo dnf install -y meld 
+sudo dnf install -y krita
+sudo dnf install -y inkscape
+sudo dnf install -y meld
 sudo dnf install -y vlc
-
 
 
 echo "#########################################################"
@@ -47,22 +45,16 @@ sudo dnf install -y scrot
 # transparency of non active window
 sudo dnf install -y compton
 
-# notify demon
-#sudo dnf install -y notify-osd
-
-
 # get the mouse out of the way
 sudo dnf install -y unclutter
 
-# to know what system you are on normally installed
-#sudo dnf install -y lsb-release
-
 # panel icon for sound
 # sudo apt-get install -y volti
-sudo dnf install  -y pasystray  paprefs pavumeter pulseaudio-module-zeroconf
+sudo dnf install -y pasystray paprefs pavumeter pulseaudio-module-zeroconf
 
 # different terminal for nemo
-sudo dnf install -y gnome-terminal nemo nemo-compare nemo-fileroller thunar
+#sudo dnf install -y gnome-terminal nemo nemo-compare nemo-fileroller thunar
+sudo dnf install thunar
 
 # Cursor theme
 sudo dnf install -y breeze-cursor-theme
