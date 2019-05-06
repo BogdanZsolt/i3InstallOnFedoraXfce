@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) notify-send "Biggest memory hogs:
+$(ps -axch -o cmd:15,%mem --sort=-%mem | head)" ;;
+	#3) echo "right click action" ;;
+esac
+
+exec free -h | awk '/^Mem:/  { print $3 "/" $2 }'

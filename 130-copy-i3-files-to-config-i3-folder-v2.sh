@@ -83,25 +83,6 @@ case $DISTRO in
 
 		;;
 
-	Solus|solus)
-		echo "################################################################"
-		echo "Installing software for "$DISTRO
-
-		if ! location="$(type -p "git")" || [ -z "git" ]; then
-
-			echo "################################################################"
-			echo "installing git for this script to work"
-
-
-		  	sudo eopkg install -y git
-
-		  else
-		  	echo "################################################################"
-		  	echo "git was already installed. Proceeding..."
-
-
-		fi
-		;;
 	Fedora|fedora)
 		echo "################################################################"
 		echo "Installing software for "$DISTRO

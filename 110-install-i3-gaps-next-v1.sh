@@ -12,13 +12,10 @@ echo "Latest possible version of i3 with gaps"
 echo "##################################################"
 
 # 1. Add the i3-gaps repository
-sudo dnf config-manager --add-repo https://copr.fedorainfracloud.org/coprs/xshramx/i3-gaps/repo/fedora-30/xshramx-i3-gaps-fedora-30.repo
+sudo dnf copr enable nforro/i3-gaps -y
 
-# 2. Update list of available packages
-sudo dnf makecache -y
-
-# 3. Install i3-gaps
-udo dnf install -y i3-gaps rofi
+# 1. Install i3-gaps
+sudo dnf install -y i3-gaps rofi
 
 i3 --version
 echo

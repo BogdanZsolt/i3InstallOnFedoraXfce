@@ -49,6 +49,9 @@ sudo dnf install -y compton
 sudo dnf install -y unclutter
 
 # panel icon for sound
+sudo dnf copr enable alick/volumeicon 
+sudo dnf install -y volumeicon
+
 # sudo apt-get install -y volti
 sudo dnf install -y pasystray paprefs pavumeter pulseaudio-module-zeroconf
 
@@ -82,8 +85,8 @@ sudo dnf install -y neofetch
 sudo dnf install -y simplescreenrecorder
 
 # i3blocks
-sudo dnf -y copr enable wyvie/i3blocks
-sudo dnf install i3blocks
+sudo dnf -y copr enable shengis/i3blocks
+sudo dnf install i3blocks -y
 
 echo
 echo

@@ -52,8 +52,6 @@ else
 fi
 
 
-
-
 FONT="StyleBats_CleanCut"
 
 
@@ -90,8 +88,6 @@ else
     fi
 
 fi
-
-
 
 echo "#########################################################"
 echo "Fonts have been  installed"

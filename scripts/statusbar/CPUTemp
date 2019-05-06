@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) echo "$(sensors | awk '/^Processor/ {print $3}') RPM" ;;
+	#2) echo "right click action" ;;
+esac
+
+sensors | awk '/^CPU/ {print $2}'

@@ -407,17 +407,13 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 # bluetooth
 exec --no-startup-id blueberry-tray
 
-# network
-exec --no-startup-id nm-applet
 
 # num lock activated
 #exec_always --no-startup-id numlockx on
 
-# dropbox
-#exec --no-startup-id dropbox start
-
 # power management
-exec_always -no-startup-id Xfce4-power-manager
+#exec -no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 
 # insync
 #exec --no-startup-id insync start
@@ -436,6 +432,8 @@ exec --no-startup-id clipit
 #exec --no-startup-id conky -c ~/.config/i3/system-overview
 #exec --no-startup-id conky -c ~/.config/i3/system-shortcuts
 
+# network
+exec --no-startup-id nm-applet
 
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
@@ -808,8 +806,8 @@ bar {
     workspace_buttons yes
     font pango:Noto Sans 14
 
-    #position top
-    position bottom
+    position top
+    #position bottom
 
     #system icons
     #tray_output none
@@ -826,8 +824,6 @@ bar {
     # Second one is the standard statusbar with my personal settings
 
 	#status_command i3status
-	status_command i3status -c ~/.config/i3/i3status.conf
-
 
 
 # OPTION 2 : i3blocks
@@ -839,7 +835,7 @@ bar {
 #status_command i3blocks
 #status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #status_command i3blocks -c ~/.config/i3/i3blocks-original.conf
-#status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
+status_command i3blocks -c ~/.config/i3blocks/config
 
 
 # OPTION 3 : conky
